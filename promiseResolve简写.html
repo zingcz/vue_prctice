@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            //resolve("milk!")
+            reject("bread")
+        },1000)
+    }).catch((data)=>{
+        console.log(data);
+        console.log(data);
+        console.log(data);
+        return data+' is'//简写一
+    }).then((data)=>{
+        console.log(data+" good")//简写二
+        return Promise.resolve(data+' is');
+    }).then((data)=>{
+        console.log(data+" healthy")
+    })
+    
+</script>
+</html>
